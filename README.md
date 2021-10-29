@@ -8,3 +8,5 @@ Basic task tracker app created for learning react.
 - Run `npm run server` in a new terminal to start mock database server.
 - Run `npm start` to start the application.
 - Access app via `localhost:3000`.
+
+ rounded px-4 py-2 text-md text-white

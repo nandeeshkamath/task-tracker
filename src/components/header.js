@@ -6,8 +6,8 @@ const Header = ({ title, showAddButton, toggleAddButton }) => {
     const location = useLocation()
 
     return (
-        <header className='header'>
-            <h1>Hello {title}</h1>
+        <header className="flex justify-between object-center">
+            <h1 className="text-3xl">Hello {title}</h1>
             {location.pathname === '/' && (<Button 
             color = {showAddButton ? 'red' : 'green'} 
              text = {showAddButton ? 'Close' : 'Add'} 

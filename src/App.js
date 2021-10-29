@@ -94,15 +94,17 @@ function App() {
 
   return (
     <Router>
-      <div className="container">
+      <div className="max-w-2xl min-h-full mx-72 mt-10 mb-10 h-full border border-solid border-blue-400 p-7 border-r-4 items-center">
         <Header title={'Nandeesh'} showAddButton={showAddButton} toggleAddButton={toggleAddButton} />
         <Route path='/' exact render={(props) => (
           <>
             {showAddButton && <AddTask addTask={addTask} toggleAddButton={toggleAddButton} />}
+            <div className="pt-10">
             {tasks.length > 0 ?
               <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
               : 'No tasks to show'
             }
+            </div>
           </>
         )} />
         <Route path='/about' component={AboutUs} />
